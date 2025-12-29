@@ -1,5 +1,3 @@
-# nathalia.portfolio
-Portfólio profissional da Nathalia Vergara
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -24,14 +22,20 @@ Portfólio profissional da Nathalia Vergara
 
     a {
       text-decoration: none;
-      color: inherit;
+      color: #0077cc;
+      transition: color 0.3s;
     }
 
-    /* Containers gerais */
+    a:hover {
+      color: #004a99;
+    }
+
+    /* Seções gerais */
     .section {
       padding: 60px 20px;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
+      text-align: center;
     }
 
     h2, h3 {
@@ -47,16 +51,20 @@ Portfólio profissional da Nathalia Vergara
     .row {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 40px;
-      align-items: center;
+      align-items: flex-start;
+      margin-top: 40px;
     }
 
     .col-50 {
-      flex: 0 0 50%;
+      flex: 0 0 45%;
+      max-width: 45%;
     }
 
     .col-33 {
-      flex: 0 0 33.33%;
+      flex: 0 0 28%;
+      max-width: 28%;
     }
 
     img {
@@ -64,56 +72,61 @@ Portfólio profissional da Nathalia Vergara
       display: block;
       border-radius: 8px;
       object-fit: cover;
+      margin: 0 auto;
     }
 
-    /* Botões */
+    /* Botão */
     .btn {
       display: inline-block;
       padding: 12px 25px;
-      background-color: #444;
+      background-color: #0077cc;
       color: #fff;
       border-radius: 5px;
       transition: background-color 0.3s;
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     .btn:hover {
-      background-color: #222;
+      background-color: #004a99;
     }
 
-    /* Títulos centrais */
-    .text-center {
-      text-align: center;
-    }
-
-    /* Blocos de destaque (cover) */
+    /* Blocos de destaque */
     .cover {
       position: relative;
       overflow: hidden;
       border-radius: 8px;
       margin-bottom: 40px;
+      background-color: #ccc;
       color: #fff;
+      padding: 30px 15px;
       text-align: center;
-      padding: 30px 20px;
     }
 
     .cover img {
       width: 100%;
       height: auto;
       opacity: 0.5;
+      border-radius: 8px;
     }
 
     .cover-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      margin-top: -100%;
+      z-index: 2;
+    }
+
+    /* Lista de hiperlinks */
+    .links a {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
     }
 
     /* Responsividade */
     @media(max-width: 900px){
       .col-50, .col-33 {
         flex: 0 0 100%;
+        max-width: 100%;
       }
     }
 
@@ -123,10 +136,10 @@ Portfólio profissional da Nathalia Vergara
 
   <!-- Seção Sobre -->
   <section class="section" id="sobre">
+    <h3>Sobre mim</h3>
+    <h2>Nathalia Vergara</h2>
     <div class="row">
       <div class="col-50">
-        <h3>Sobre mim</h3>
-        <h2>Nathalia Vergara</h2>
         <p>Jornalista formada pela UFOP. Tenho experiência com assessoria de imprensa, comunicação interna, redação, jornalismo, social media e edição de vídeos e áudios.</p>
         <p>Profissional de Comunicação com atuação estratégica em Assessoria de Imprensa, Comunicação Interna e Marketing Institucional. Tenho experiência na consolidação de fluxos de comunicação, desenvolvimento de projetos estruturantes, gestão de crises, produção de conteúdo multicanal e articulação com diferentes áreas da organização para garantir alinhamento e visibilidade. Atuo de forma integrada, combinando visão analítica, agilidade, rigor técnico e orientação a resultados — tanto na imprensa quanto nos canais internos da instituição.</p>
         <a href="#contato" class="btn">Contato</a>
@@ -138,19 +151,19 @@ Portfólio profissional da Nathalia Vergara
   </section>
 
   <!-- Seção Atuação -->
-  <section class="section text-center">
+  <section class="section">
     <h3>Minha atuação na Faculdade Santa Casa de SP em 2025:</h3>
     <p>Em 2025, fui responsável por duas frentes centrais da Comunicação Institucional: a Assessoria de Imprensa e a Comunicação Interna, garantindo resultados expressivos para a empresa.</p>
   </section>
 
-  <!-- Seção Destaques / Cover -->
+  <!-- Seção Destaques -->
   <section class="section">
     <div class="row">
       <div class="col-33">
         <div class="cover" style="background-color:#92877a;">
           <img src="https://vergaranathalia98-wuxyv.wordpress.com/wp-content/uploads/2025/12/site-title-6952edeaed0d2.png" alt="">
           <div class="cover-content">
-            <p>Assessoria de imprensa:</p>
+            <p><strong>Assessoria de imprensa:</strong></p>
             <p>— Proposição de pautas (proativas)<br>— Gestão de demandas da mídia (reativas)<br>— Produção de releases<br>— Relacionamento com jornalistas<br>— Apoio às áreas para garantir porta-vozes preparados</p>
           </div>
         </div>
@@ -159,7 +172,7 @@ Portfólio profissional da Nathalia Vergara
         <div class="cover" style="background-color:#8c8e89;">
           <img src="https://vergaranathalia98-wuxyv.wordpress.com/wp-content/uploads/2025/12/site-title-6952ede7e2259.png" alt="">
           <div class="cover-content">
-            <p>Comunicação interna:</p>
+            <p><strong>Comunicação interna:</strong></p>
             <p>— Planejamento, redação e gestão de mensagens<br>— Consolidação de newsletters<br>— Ações de endomarketing<br>— Campanhas temáticas<br>— Estruturação de novos canais<br>— Desenvolvimento de identidade visual<br>— Apoio em setores estratégicos</p>
           </div>
         </div>
@@ -196,28 +209,40 @@ Portfólio profissional da Nathalia Vergara
       </div>
       <div class="col-33">
         <p>Principais Releases:</p>
-        <p>✔ texto<br>✔ texto<br>✔ texto<br>✔ texto</p>
+        <div class="links">
+          <a href="#">hiperlink</a>
+          <a href="#">hiperlink</a>
+          <a href="#">hiperlink</a>
+          <a href="#">hiperlink</a>
+        </div>
       </div>
     </div>
+
     <h3>Conheça os projetos:</h3>
     <div class="row">
       <div class="col-33">
         <p>Releases:</p>
-        <p>(inserir hiperlink)</p>
+        <div class="links">
+          <a href="#">hiperlink</a>
+        </div>
       </div>
       <div class="col-33">
         <p>Comunicação interna:</p>
-        <p>(inserir hiperlink)</p>
+        <div class="links">
+          <a href="#">hiperlink</a>
+        </div>
       </div>
       <div class="col-33">
         <p>Notícias institucionais:</p>
-        <p>(inserir hiperlink)</p>
+        <div class="links">
+          <a href="#">hiperlink</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Seção Footer / Sobre outras atuações -->
-  <section class="section text-center" id="contato">
+  <!-- Seção Footer / Contato -->
+  <section class="section" id="contato">
     <h3>Jornalista | Redatora | Social Media | Editora</h3>
     <p>(inserir resumo sobre minhas outras atuações)</p>
     <p>(inserir links de textos, portfólios e outros trabalhos)</p>
